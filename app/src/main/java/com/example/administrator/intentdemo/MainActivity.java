@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ActivityCoolector.addActivity(this);
         Button button= (Button) findViewById(R.id.button1);
         if (savedInstanceState!=null){
             String data=savedInstanceState.getString("key");
@@ -32,5 +33,11 @@ public class MainActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
         String data="aaa";
         outState.putString("key",data);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        ActivityCoolector.removeActivity(this);
     }
 }
