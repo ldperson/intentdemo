@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.administrator.intentdemo1.MainActivity">
+    tools:context="com.example.administrator.intentdemo.MainActivity">
 
     <Button
         android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="button2"/>
+        android:text="second" />
 </LinearLayout>
